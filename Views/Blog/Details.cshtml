@@ -5,88 +5,91 @@
 }
 
 
-<div class="row">
-    <div class="col-md-8">
 
-        <h1>@Model.Baslik</h1>
-        <hr />
-        <p>
-            <span class="glyphicon glyphicon-time"></span>
-            @Model.EklemeTarihi
-        </p>
-        <hr />
-        <img class="img-responsive" src="https://poshancurethrudiet.com/wp-content/uploads/2014/09/placeholder.gif" alt="" />
-        <hr />
-        <blockquote>
-            <p>@Model.Aciklama</p>
-        </blockquote>
-        <p>
-            @Model.Icerik
-        </p>
 
-        <div class="comment">
-            <div class="well"
-                    <h4>Yorum Yap :</h4>
+<h1>@Model.Baslik</h1>
+<hr />
+<p>
+    <span class="glyphicon glyphicon-time"></span>
+    @Model.EklemeTarihi
+</p>
+<hr />
+<img class="img-responsive" src="https://poshancurethrudiet.com/wp-content/uploads/2014/09/placeholder.gif" alt="" />
+<hr />
+<blockquote>
+    <p>@Model.Aciklama</p>
+</blockquote>
+<p>
+    @Model.Icerik
+</p>
+
+<div class="comment">
+    <div class="well"
+
+                <h4>Yorum Yap :</h4>
                     <form role="form">
                         <div class="form-group">
                             <textarea class="form-control" rows="3"></textarea>
                         </div>
                         <button type="submit"class="btn btn-primary">Submit</button>
                     </form>
-                </div>
-
-            <hr />
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img alt="64x64" class="media-object" />
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">Media Heading</h4>
-                </div>
             </div>
 
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img alt="64x64" class="media-object" />
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">Media Heading</h4>
-                </div>
-            </div>
 
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img alt="64x64" class="media-object" />
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">Media Heading</h4>
-                </div>
-            </div>
+    <hr />
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <img alt="64x64" class="media-object" />
+            </a>
         </div>
-
-        
-        <div class="col-md-4">
-            <div class="well">
-                <h4>Blog Search</h4>
-                <div class="input-group">
-                    <input type="text" class="form-control" />
-                    <span class="input-group-btn">
-                        <button class="btn-default" type="button">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                    </span>
-                </div>
-            </div>
-
+        <div class="media-body">
+            <h4 class="media-heading">Media Heading</h4>
         </div>
-        <!-- /.input group-->
-
-
-
     </div>
+
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <img alt="64x64" class="media-object" />
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Media Heading</h4>
+        </div>
+    </div>
+
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <img alt="64x64" class="media-object" />
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Media Heading</h4>
+        </div>
+    </div>
+</div>
+
+@section SagKolon
+{
+
+    <div class="well">
+        <h4>Blog Search</h4>
+        <div class="input-group">
+            <input type="text" class="form-control" />
+            <span class="input-group-btn">
+                <button class="btn-default" type="button">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+        </div>
+    </div>
+
+    @{Html.RenderAction("KategoriListes", "Category");}
+
+
+    <!-- /.input group-->
+}
+
+
