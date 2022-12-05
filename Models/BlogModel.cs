@@ -15,5 +15,6 @@ namespace BlogMvcApp.Models
         public DateTime EklemeTarihi { get; set; }
         public bool Onay { get; set; }
         public bool Anasayfa { get; set; }
+        public int CategoryId { get; set; }
     }
 }

@@ -6,15 +6,16 @@
 
 <h2>Blog Listesi</h2>
 
-
 @Html.Partial("BlogListesi", Model)
+
 
 
 @section SagKolon
 {
+
+
     @Html.Partial("Search")
     @{Html.RenderAction("KategoriListes", "Category");}
-
 }
 
 
