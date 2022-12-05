@@ -4,13 +4,25 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<h2>Kategori Listesi</h2>
+<hr />
 <p>
     @Html.ActionLink("Kategori Ekle", "Create",null,new {@class="btn btn-primary"})
     
 </p>
 <hr />
+
+
+@if(TempData["Kategori"]!=null)
+{
+    var kategori = (BlogMvcApp.Models.Category)TempData["Kategori"];
+    
+    <div class="alert alert-success">
+        <span class="glyphicon glyphicon-ok"></span>
+        <b>@kategori.KategoriAdi</b>
+
+    </div>
+}
 <table class="table table-bordered table-hover table-striped">
     <tr>
         <th style="width:60%;">
@@ -37,5 +49,6 @@
         </td>
     </tr>
 }
+   
 
 </table>
